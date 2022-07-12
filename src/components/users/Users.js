@@ -3,13 +3,7 @@ import UserService from "../../services/userService";
 import User from "./User";
 
 
-// function withRouter = (Component) => {
-//     return (
-//         <Component
-//
-//         />
-//     )
-// }
+
 
 class Users extends Component {
 

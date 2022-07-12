@@ -1,11 +1,5 @@
 import React, {Component} from 'react';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-  Outlet
-} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 import Users from "./components/users/Users";
 import Posts from "./components/posts/Posts";
 import "./styles/App.css";
@@ -30,10 +24,18 @@ class App extends Component {
                 </div>
 
                 <div className={"content"}>
-                    <Routes>
-                        <Route path={"/users"} element={<Users/>}/>
-                        <Route path={"/posts"} element={<Posts/>}/>
-                    </Routes>
+                    <Switch>
+                        <Route path={"/users"} render={() => {
+                            return(
+                                <Users/>
+                            )
+                        }}/>
+                        <Route path={"/posts"} render={() => {
+                            return (
+                                <Posts/>
+                            )
+                        }}/>
+                    </Switch>
                 </div>
 
             </div>
